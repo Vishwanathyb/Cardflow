@@ -1,0 +1,143 @@
+{
+  "identity": {
+    "name": "CardFlow",
+    "persona": "The Anti-Jira. A fluid, visual, and tactile project management tool for creative developers and visual thinkers.",
+    "tone": "Fluid, Uncluttered, Precise, Optimistic.",
+    "principles": [
+      "Canvas is King: The UI recedes, the content pops.",
+      "Tangible Cards: Cards should feel like physical objects (subtle shadows, borders).",
+      "Flow over Form: Interactions should be smooth and non-blocking.",
+      "Visual Clarity: Use color and shape to denote meaning, not just text."
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Manrope, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "weights": {
+      "heading": "font-bold (700) or font-extrabold (800)",
+      "body": "font-normal (400) or font-medium (500)"
+    },
+    "usage": {
+      "h1": "text-4xl md:text-6xl font-extrabold tracking-tight text-foreground",
+      "h2": "text-3xl font-bold tracking-tight text-foreground",
+      "h3": "text-2xl font-semibold tracking-tight text-foreground",
+      "body": "text-base text-muted-foreground leading-relaxed",
+      "caption": "text-sm text-muted-foreground font-medium uppercase tracking-wider",
+      "code": "font-mono text-xs bg-muted px-1 py-0.5 rounded text-foreground"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "name": "Electric Indigo",
+        "hex": "#4F46E5",
+        "tailwind": "bg-primary text-primary-foreground"
+      },
+      "background": {
+        "light": "#FFFFFF",
+        "dark": "#09090B",
+        "canvas_light": "#F9FAFB",
+        "canvas_dark": "#18181B"
+      },
+      "cards": {
+        "feature": "bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800",
+        "bug": "bg-red-50 dark:bg-red-950/30 border-red-200 dark:border-red-800",
+        "idea": "bg-yellow-50 dark:bg-yellow-950/30 border-yellow-200 dark:border-yellow-800",
+        "epic": "bg-purple-50 dark:bg-purple-950/30 border-purple-200 dark:border-purple-800",
+        "note": "bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700"
+      }
+    },
+    "gradients": {
+      "hero": "bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500",
+      "subtle": "bg-gradient-to-b from-background to-muted/50"
+    }
+  },
+  "layout": {
+    "spacing": {
+      "container": "container mx-auto px-4 md:px-6",
+      "section": "py-12 md:py-24 lg:py-32",
+      "card_padding": "p-6"
+    },
+    "grids": {
+      "dashboard": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+      "features": "grid grid-cols-1 md:grid-cols-3 gap-8"
+    },
+    "z_index": {
+      "canvas": "z-0",
+      "nodes": "z-10",
+      "controls": "z-40",
+      "overlays": "z-50",
+      "modals": "z-50"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "rounded-full font-medium transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl",
+      "secondary": "rounded-full font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-all",
+      "ghost": "rounded-full hover:bg-accent hover:text-accent-foreground"
+    },
+    "cards": {
+      "base": "rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:shadow-md",
+      "interactive": "cursor-pointer hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+    },
+    "inputs": {
+      "base": "rounded-lg border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    },
+    "glassmorphism": {
+      "toolbar": "bg-background/60 backdrop-blur-xl border border-border/50 shadow-lg rounded-2xl"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": {
+        "url": "https://images.unsplash.com/photo-1761449779811-33f7c48ed367?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMGZsb3clMjBzaGFwZXMlMjBtaW5pbWFsfGVufDB8fHx8MTc2OTcxOTkwNnww&ixlib=rb-4.1.0&q=85",
+        "alt": "Abstract blue ribbons flowing, representing workflow"
+      },
+      "collaboration": {
+        "url": "https://images.pexels.com/photos/6238174/pexels-photo-6238174.jpeg",
+        "alt": "Diverse team collaborating on a project"
+      },
+      "creative_concept": {
+        "url": "https://images.unsplash.com/photo-1737505599076-e6f35a78d1d6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMGZsb3clMjBzaGFwZXMlMjBtaW5pbWFsfGVufDB8fHx8MTc2OTcxOTkwNnww&ixlib=rb-4.1.0&q=85",
+        "alt": "Abstract concrete sculpture, representing structure and creativity"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-width={1.5} className='w-5 h-5'"
+    }
+  },
+  "motion": {
+    "transitions": {
+      "default": "transition-all duration-200 ease-in-out",
+      "slow": "transition-all duration-500 ease-out",
+      "bounce": "transition-all duration-300 cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+    },
+    "animations": {
+      "fade_in": "animate-in fade-in duration-500",
+      "slide_up": "animate-in slide-in-from-bottom-4 duration-500",
+      "zoom_in": "animate-in zoom-in-95 duration-300"
+    }
+  },
+  "universal_guidelines": [
+    "Do NOT use gradients for text or borders unless explicitly for a 'magic' effect.",
+    "Avoid 'Inter' for headings. Use 'Manrope'.",
+    "Use 'sonner' for all toast notifications.",
+    "Ensure all interactive elements have `data-testid` attributes.",
+    "Use `lucide-react` for icons.",
+    "For the Canvas, use `reactflow` (or `@xyflow/react`).",
+    "Dark mode should not be pure black (#000000), use #09090B.",
+    "Glassmorphism is encouraged for floating panels over the canvas.",
+    "Cards on the canvas should have a 'handle' or distinct header area for dragging.",
+    "Use 'hsl' variables from `index.css` for all color definitions to ensure theme switching works."
+  ],
+  "instructions_to_main_agent": {
+    "setup": "Ensure `react-router-dom` is used for navigation. Install `framer-motion` for complex animations if needed, but prefer Tailwind `animate-` classes for simple ones.",
+    "canvas_implementation": "The core feature is the Infinite Canvas. Use a library like React Flow. Custom nodes are required for the 'Cards'.",
+    "auth": "Implement a clean, centered auth card with 'Continue with Google' as the primary action.",
+    "dashboard": "The dashboard should be a grid of 'Boards'. Each board card should show a mini-preview or a colorful icon representing the project."
+  }
+}
