@@ -109,3 +109,69 @@ CardFlow is a visual project planning application that allows users to manage wo
 2. Add card comments feature
 3. Build real-time collaboration with WebSockets
 4. Add due date support with calendar picker
+
+---
+
+## Offline Version (January 29, 2026)
+
+### What's Been Implemented
+
+#### Offline App Structure (`/app/cardflow-offline/`)
+- Complete standalone React app with SQLite database
+- PWA support with service worker for mobile
+- Tauri configuration for desktop apps (Linux/Windows/macOS)
+- Electron alternative for larger desktop builds
+
+#### SQLite Database (`src/lib/database.js`)
+- sql.js (SQLite compiled to WebAssembly)
+- Tables: users, workspaces, boards, cards, links, settings
+- Full CRUD operations
+- Export/Import database as .db files
+- Data stored in localStorage
+
+#### State Management (`src/lib/stores.js`)
+- Zustand stores for: Auth, Workspace, Board, Card, Link, Theme
+- Persisted state with zustand/middleware
+- Reactive data flow
+
+#### Desktop Build Options
+1. **Tauri 2.0** (Recommended)
+   - ~10MB app size
+   - Native performance
+   - Linux: AppImage, .deb
+   - Windows: NSIS installer, portable
+   - macOS: DMG
+
+2. **Electron** (Alternative)
+   - ~150MB app size
+   - Easier setup
+   - Same platform support
+
+#### Mobile (PWA)
+- Service Worker for offline caching
+- Web App Manifest for installability
+- Works on iOS and Android via browser install
+
+### Build Commands
+```bash
+# Development
+yarn start
+
+# Tauri Desktop Build
+yarn tauri:build
+
+# Electron Desktop Build  
+yarn electron:build
+
+# PWA Production Build
+yarn build
+```
+
+### Files Created
+- `/app/cardflow-offline/` - Complete offline app
+- `src/lib/database.js` - SQLite operations
+- `src/lib/stores.js` - State management
+- `src-tauri/` - Tauri native app config
+- `electron/main.js` - Electron config
+- `public/sw.js` - Service Worker
+- `public/manifest.json` - PWA manifest
